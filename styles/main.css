@@ -35,7 +35,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #4285f4;
+    background-color: #333333;
     overflow: hidden;
     z-index: 1;
 }
@@ -145,7 +145,7 @@ button.menu img {
     bottom: 0;
     width: 250px;
     height: 100%;
-    background-color: #3367D6;
+    background-color: #555555;
     color: #fefefe;
     -webkit-transform: translate(-250px, 0);
     transform: translate(-250px, 0);
@@ -170,8 +170,8 @@ button.menu img {
 }
 
 .navdrawer-container h4 {
-    background-color: white;
-    color: #3367D6;
+    /*background-color: white;*/
+    color: #333;
 }
 
 .navdrawer-container ul {
@@ -246,7 +246,7 @@ main h3{
     font-weight: 400;
 }
 
-main#work p a {
+main#work p a, main#contact p a {
     color: #295AB1;
     /*text-decoration: none;*/
     font-weight: 400;
@@ -426,7 +426,12 @@ a:hover{
 
     a:hover{
     text-decoration: underline;
-}
+    }
+
+    .skill{
+        width: 50%;
+        float: left;
+    }
 }
 
 @media all and (max-width: 800px) {
@@ -458,5 +463,13 @@ a:hover{
         -webkit-flex: 1;
         flex: 1;
         text-align: center;
+    }
+
+    .navdrawer-container ul li.bottom{
+        border-bottom: none;
+    }
+
+    .navdrawer-container ul li{
+        border-bottom-color: rgba(255,255,255,0.5);
     }
 }
