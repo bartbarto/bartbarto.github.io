@@ -248,7 +248,7 @@ main h3{
 
 main#work p a {
     color: #295AB1;
-    text-decoration: none;
+    /*text-decoration: none;*/
     font-weight: 400;
 }
 
@@ -280,6 +280,9 @@ main#hello{
     display: inline;
 }
 
+a:hover{
+    text-decoration: underline;
+}
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 1000px) {
     .app-bar {
@@ -420,6 +423,10 @@ main#hello{
         position: relative;
         margin-top: 0;
     }*/
+
+    a:hover{
+    text-decoration: underline;
+}
 }
 
 @media all and (max-width: 800px) {
