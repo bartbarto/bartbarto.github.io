@@ -55,7 +55,6 @@
     // })
 
     window.onhashchange = function(e){
-        console.log(e.newURL.split('#')[1]);
         switchViews('#' + e.newURL.split('#')[1])
     }
 
