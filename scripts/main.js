@@ -19,6 +19,8 @@
 (function() {
     'use strict';
 
+    console.log(' __                 \n/  \\        _____________ \n|  |       /             \\\n@  @       | Hi there.   |\n|| ||      |             |\n|| ||   <--| Please type |\n|\\_/|      | your command|\n\\___/      \\_____________/           ')
+
     var navdrawerContainer = document.querySelector('.navdrawer-container');
     var appbarElement = document.querySelector('.app-bar');
     var menuBtn = document.querySelector('.menu');
@@ -45,7 +47,10 @@
 
     document.querySelector('.navdrawer-container').addEventListener('click', function(e) {
         var clickEl = e.toElement.getAttribute('href');
-        switchViews(clickEl);
+        // alert(clickEl);
+        if(clickEl){
+            switchViews(clickEl);
+        }
     })
 
     // document.querySelector('.navi').addEventListener('click', function(e) {
