@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Bart's Nieuwe Website</title>
+    <title>Bart Van Itterbeeck</title>
     <link rel="stylesheet" href="fa.css">
     <style type="text/css">
     html,
@@ -11,6 +11,7 @@
         margin: 0;
         padding: 0;
         width: 100%;
+        height: 100%;
         min-height: 100%;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         background: #EFEFEF;
@@ -40,6 +41,7 @@
         width: 100%;
         position: relative;
         text-align: center;
+        height: 100%;
     }
     li .trigger{
         color: #aaa;
@@ -53,7 +55,7 @@
         text-align: center;
         padding: .8em;
         background: #444;
-        z-index: 10;
+        z-index: 100;
         font-size: 12pt;
     }
     li .trigger:hover {
@@ -64,20 +66,23 @@
     }
     li:last-child .trigger {
         /*position: absolute;*/
-
         left: 0;
     }
     .content,
     .work-info {
         display: none;
         position: absolute !important;
-        top: 2em;
+        top: 3em;
         left: 0;
-        padding: 2em;
+        padding: 0 2em 2em 2em;
         width: 100%;
         text-align: left !important;
         z-index: 0;
+        background: #EFEFEF;
+        /*min-height: 800px;*/
+        z-index: 10;
     }
+
     li:target .content,
     li:last-child .content {
         display: block;
@@ -93,6 +98,22 @@
         color: #aaa;
         border-right-width: 0px !important;
     }
+    li:last-child .content{
+    	display: block;
+    	z-index: 0;
+    }
+    /*li#about:target .content{
+    	display: block;
+    }*/
+
+   /* li:first-child .content {
+        display: block !important;
+    }
+
+    li:first-child:not(:target) .content{
+    	display: none;
+    }*/
+
     i.fa {
         display: none;
     }
@@ -230,9 +251,9 @@ background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0
 	</div> -->
 
     <ul class="tabs">
-        <li id="about">
+        <li id="">
             <a href="#about" class="trigger"><i class="fa fa-male"></i><span class="title">About Me</span></a>
-            <div class="content">
+           <!--  <div class="content">
                 <h3>About Me</h3>
                 <div class="has-image">
                     <img src="me.jpeg" alt="A stunning picture of Bart Van Itterbeeck" class="pro-image">
@@ -250,7 +271,7 @@ background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0
                 </p>
                 <p>
                     I'm also a fan of everything science-fiction related, especially Star Wars or <strong>Doctor Who</strong> and I draw smiley faces everywhere.</p>
-            </div>
+            </div> -->
         </li>
         <li id="work">
             <a href="#work" class="trigger"><i class="fa fa-flask"></i><span class="title">My Work</span></a>
@@ -540,6 +561,31 @@ background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0
                 <br>
                 <strong>Description:</strong> An iPhone app, to log your poo types. Made while trying to learn swift
             </p>
+        </li>
+
+        <!-- About Me -->
+        <li id="about">
+            <!-- <a href="#about" class="trigger"><i class="fa fa-male"></i><span class="title">About Me</span></a> -->
+            <div class="content">
+                <h3>About Me</h3>
+                <div class="has-image">
+                    <img src="me.jpeg" alt="A stunning picture of Bart Van Itterbeeck" class="pro-image">
+                </div>
+                <p>
+                    Hi, I'm <strong>Bart</strong>, currently a graduate <strong>Web&amp;UX</strong> from Karel de Grote Hogeschool.
+                    <br> During my time there I've made some fantastic projects like <a href="http://bartbarto.github.io/Planes-Above-Me/">Planes Above Me</a> or <a href="http://kerm.is">Kerm.is</a>.
+                    <br>You can see more of my work <a href="#work" class="navi">here</a>
+                    <br> I've always been fascinated by <strong>technology</strong> and the <strong>internet</strong>, and I decided that I wanted to make the internet my workplace.
+                </p>
+                <p>
+                    I'm skilled in current web technologies, such as HTML5, CSS3, jQuery, canvas and WebGL.
+                    <br> I also have experience building <strong>responsive</strong> websites and making themes for <strong>Wordpress</strong>.
+                    <br>You can see more of my skills <a href="#skills" class="navi">here</a>
+                </p>
+                <p>
+                    I'm also a fan of everything science-fiction related, especially Star Wars or <strong>Doctor Who</strong> and I draw smiley faces everywhere.</p>
+            </div>
+
         </li>
     </ul>
 
