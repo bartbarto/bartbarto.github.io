@@ -1,113 +1,425 @@
-<!doctype html>
-<!--
-             .-=-==--==--.
-       ..-=="  ,'o`)      `.
-     ,'         `"'         \
-    :  (                     `.__...._
-    |                  )    /         `-=-.
-    :       ,vv.-._   /    /               `---==-._
-     \/\/\/VV ^ d88`;'    /                         `.
-         ``  ^/d88P!'    /             ,              `._
-            ^/    !'   ,.      ,      /                  "-,,__,,--'""""-.
-           ^/    !'  ,'  \ . .(      (         _           )  ) ) ) ))_,-.\
-          ^(__ ,!',"'   ;:+.:%:a.     \:.. . ,'          )  )  ) ) ,"'    '
-          ',,,'','     /o:::":%:%a.    \:.:.:         .    )  ) _,'
-           """'       ;':::'' `+%%%a._  \%:%|         ;.). _,-""
-                  ,-='_.-'      ``:%::)  )%:|        /:._,"
-                 (/(/"           ," ,'_,'%%%:       (_,'
-                                (  (//(`.___;        \
-                                 \     \    `         `
-                                  `.    `.   `.        :
-                                    \. . .\    : . . . :
-                                     \. . .:    `.. . .:
-RUN !!  It's a T-REX  !!!            `..:.:\     \:...\
-     \                                ;:.:.;      ::...:
-                                      ):%::       :::::;
-       _O/            0 _         __,::%:(        :::::
-         \           / \ `     ,;:%%%%%%%:        ;:%::
-         /\_           /|        ;,--""-.`\  ,=--':%:%:\
-         \  `         | \       /"       "| /-".:%%%%%%%\
-         `                                       ;,-"'`)%%)
-                                                /"      "|
+<!DOCTYPE html>
+<html lang="en">
 
--->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Bart's Website">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bart Van Itterbeeck</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Bart's Nieuwe Website</title>
+    <link rel="stylesheet" href="fa.css">
+    <style type="text/css">
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100%;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background: #EFEFEF;
+        /*opacity: 0.1;*/
 
-        <!-- Add to homescreen for Chrome on Android -->
-        <meta name="mobile-web-app-capable" content="yes">
+        font-weight: 400;
+    }
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+    *,
+    *:before,
+    *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .tabs {
+        position: absolute;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+    }
+    .tabs li {
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+    li .trigger{
+        color: #aaa;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        width: 25%;
+        display: block;
+        float: left;
+        text-align: center;
+        padding: .8em;
+        background: #444;
+        z-index: 10;
+        font-size: 12pt;
+    }
+    li .trigger:hover {
+        color: #CCC;
+    }
+    li:first-child .trigger {
+        /*margin-left: 25%;*/
+    }
+    li:last-child .trigger {
+        /*position: absolute;*/
 
+        left: 0;
+    }
+    .content,
+    .work-info {
+        display: none;
+        position: absolute !important;
+        top: 2em;
+        left: 0;
+        padding: 2em;
+        width: 100%;
+        text-align: left !important;
+        z-index: 0;
+    }
+    li:target .content,
+    li:last-child .content {
+        display: block;
+    }
+    li:target .trigger,
+    li:last-child .trigger {
+        color: #EFEFEF;
+    }
+    li:target ~ li:last-child .content {
+        display: none;
+    }
+    li:target ~ li:last-child .trigger {
+        color: #aaa;
+        border-right-width: 0px !important;
+    }
+    i.fa {
+        display: none;
+    }
+    a {
+        text-decoration: none;
+        color: #4683FE;
+    }
+    a:visited {
+        color: #4683FE;
+    }
+    a.trigger {
+        color: #aaa;
+    }
+    img.pro-image {
+        max-width: 50%;
+        width: 130px;
+        border-radius: 10px;
+        border: solid #FFF 2px;
+    }
+    .work-item, .skill {
+        width: 45%;
+        margin: 2.5%;
+        float: left;
+        background: #FFF;
+        overflow: hidden;
+        color: inherit;
+        text-align: center;
+        padding: 2.5%;
+        height: 160px;
+        position: relative;
+        border: solid #CCC 1px;
+    }
+    .work-item:hover{
+    	transform: scale(1.075);
+    	-webkit-transform: scale(1.075);
+    	transition: all 0.1s ease-in-out 0;
+    	-webkit-transition: all 0.1s ease-in-out 0;
+    }
+    .work-item h4{
+    	position: relative;
+    	margin-top: 90px;
+    	z-index: 2;
+    	font-size: 12pt;
+    }
+    .skill{
+    	height: auto !important;
+    	text-align: left;
+    }
+    .work-item:before{
+    	content: " ";
+    	width: 100%;
+    	height: 100%;
+    	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.65) 76%, rgba(255,255,255,0.65) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(76%,rgba(255,255,255,0.65)), color-stop(100%,rgba(255,255,255,0.65))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.65) 76%,rgba(255,255,255,0.65) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.65) 76%,rgba(255,255,255,0.65) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.65) 76%,rgba(255,255,255,0.65) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.65) 76%,rgba(255,255,255,0.65) 100%); /* W3C */
+    	z-index: 2;
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    }
+    .work-item img.bg-img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+		opacity: 1;
+		transition: all 0.1s ease-in-out 0;
+		-webkit-transition: all 0.1s ease-in-out 0;
+    }
 
-        <!-- Generic Icon -->
-        <link rel="icon" type="image/x-icon" href="/favicon.png">
+    a.work-item:visited {
+        color: inherit;
+    }
+    #work p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    #work h3 {
+    	font-size: 14pt;
+        width: 100%;
+        float: left;
+    }
+    .work-info {
+        display: none;
+    }
+    .work-info:target {
+        display: block;
+    }
+    @media (min-width: 800px) {
+        .content, .work-info {
+            width: 800px !important;
+            margin-left: auto;
+            margin-right: auto;
+            left: calc(50% - 400px);
+        }
+    }
+    @media (max-width: 800px) {
+        .content {
+            padding: 1em;
+        }
+    }
+    @media (max-width: 650px) {
+        .title {
+            display: none;
+        }
+        i.fa {
+            display: block;
+        }
+        li .trigger {
+            font-size: 16pt;
+            border: solid #343434 0px;
+            border-right-width: 1px
+        }
+        .work-item, .skill {
+            width: 100%;
+            margin: 0 0 5% 0;
+        }
+    }
+    </style>
+</head>
 
+<body>
+    <!-- <nav>
+		<a href="#"><li>About Me</li></a>
+		<a href="#"><li>My Work</li></a>
+		<a href="#"><li>My Skills</li></a>
+		<a href="#"><li>Contact Me</li></a>
+	</nav>
+	<div id="p1">
+		Mss Single page maken ofzo
+	</div> -->
 
-        <!-- build:css styles/components/main.min.css -->
-        <link rel="stylesheet" href="styles/h5bp.css">
-        <link rel="stylesheet" href="styles/components/components.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-    </head>
-    <body>
-        <header class="app-bar promote-layer">
-            <div class="app-bar-container">
-                <button class="menu"><img src="images/hamburger.svg"></button>
-                <section class="app-bar-actions">
-                </section>
+    <ul class="tabs">
+        <li id="about">
+            <a href="#about" class="trigger"><i class="fa fa-male"></i><span class="title">About Me</span></a>
+            <div class="content">
+                <h3>About Me</h3>
+                <div class="has-image">
+                    <img src="me.jpeg" alt="A stunning picture of Bart Van Itterbeeck" class="pro-image">
+                </div>
+                <p>
+                    Hi, I'm <strong>Bart</strong>, currently a graduate <strong>Web&amp;UX</strong> from Karel de Grote Hogeschool.
+                    <br> During my time there I've made some fantastic projects like <a href="http://bartbarto.github.io/Planes-Above-Me/">Planes Above Me</a> or <a href="http://kerm.is">Kerm.is</a>.
+                    <br>You can see more of my work <a href="#work" class="navi">here</a>
+                    <br> I've always been fascinated by <strong>technology</strong> and the <strong>internet</strong>, and I decided that I wanted to make the internet my workplace.
+                </p>
+                <p>
+                    I'm skilled in current web technologies, such as HTML5, CSS3, jQuery, canvas and WebGL.
+                    <br> I also have experience building <strong>responsive</strong> websites and making themes for <strong>Wordpress</strong>.
+                    <br>You can see more of my skills <a href="#skills" class="navi">here</a>
+                </p>
+                <p>
+                    I'm also a fan of everything science-fiction related, especially Star Wars or <strong>Doctor Who</strong> and I draw smiley faces everywhere.</p>
             </div>
-        </header>
-
-        <nav class="navdrawer-container promote-layer">
-            <h4></h4>
-            <ul>
-                <li class="me"><div class="me_pic"></div></li>
-                <li><a href="#hello">About Me</a></li>
-                <li><a href="#work">My Work</a></li>
-                <li><a href="#skills">My Skills</a></li>
-                <li><a href="#contact">My contact-info</a></li>
-                <li class="bottom">
-                    <a href="http://twitter.com/bartbarto" class="social">
-                        <img src="/images/twitter.svg">
-                    </a>
-                    <a href="https://www.linkedin.com/profile/view?id=87762872" class="social">
-                        <img src="/images/linkedin.svg">
-                    </a>
-                    <a href="mailto:hi@bartvi.be" class="social">
-                        <img src="/images/mail.svg">
-                    </a>
-
-                </li>
-            </ul>
-        </nav>
-
-        <main id="hello">
-            <h3>About Me</h3>
-            <p>
-            Hi, I'm <strong>Bart</strong>, currently a graduate <strong>Web&amp;UX</strong> from Karel de Grote Hogeschool.<br>
-            During my time there I've made some fantastic projects like <a href="http://bartbarto.github.io/Planes-Above-Me/">Planes Above Me</a> or <a href="http://kerm.is">Kerm.is</a>.
-            <br>You can see more of my work <a href="#work" class="navi">here</a>
-            <br>
-            I've always been fascinated by <strong>technology</strong> and the <strong>internet</strong>, and I decided that I wanted to make the internet my workplace.
-            </p>
-            <p>
-            I'm skilled in current web technologies, such as HTML5, CSS3, jQuery, canvas and WebGL.<br>
-            I also have experience building <strong>responsive</strong> websites and making themes for <strong>Wordpress</strong>.
-            <br>You can see more of my skills <a href="#skills" class="navi">here</a>
-            </p>
-            <p>
-            I'm also a fan of everything science-fiction related, especially Star Wars or <strong>Doctor Who</strong> and I draw smiley faces everywhere.</p>
-        </main>
-        <main id="work">
-            <h3>My Work</h3>
-            <p>Over the course of the last few years I've made a lot of sites and web-apps.<br>
-            Here are some of them</p>
-            <h3>Personal Work</h3>
+        </li>
+        <li id="work">
+            <a href="#work" class="trigger"><i class="fa fa-flask"></i><span class="title">My Work</span></a>
+            <div class="content">
+                <h3>My Work</h3>
+                <p>Over the course of the last few years I've made a lot of sites and web-apps.
+                    <br> Here are some of them</p>
+                <h3>Personal Work</h3>
 
 
+                <a href="#work-kuiper" class="work-item">
+                    <h4>Kine Kuipersstraat</h4>
+                    <img src="img/kine.png" alt="" class="bg-img">
+                </a>
+
+                <a href="#work-tat" class="work-item">
+                    <h4>Time after Time - Poster &amp; Projection Design</h4>
+                    <img src="img/time.png" alt="" class="bg-img">
+                </a>
+
+                <a href="#work-kermis" class="work-item">
+                    <h4>Kerm.is - WebGL Game Playground</h4>
+                    <img src="img/kermis.png" alt="" class="bg-img">
+                </a>
+
+                <h3>School Work</h3>
+
+
+                <a href="#work-kinetic" class="work-item">
+                    <h4>Kinetic Typography - Bohemian Rhapsody</h4>
+                    <img src="img/kinetic.png" alt="" class="bg-img">
+                </a>
+
+                <a href="#work-swag-swap" class="work-item">
+                    <h4>Website Development - Swag-Swap</h4>
+                    <img src="img/swag.png" alt="" class="bg-img">
+                </a>
+
+                <a href="#work-invaders" class="work-item">
+                    <h4>Game Development - Marvel Space Invaders</h4>
+                    <img src="img/invaders.png" alt="" class="bg-img">
+                </a>
+
+                <a href="#work-planes" class="work-item">
+                    <h4>Data visualisation - Planes Above Me</h4>
+                    <img src="img/planes.png" alt="" class="bg-img">
+                </a>
+
+                <h3>Experiments</h3>
+
+
+                <a href="#work-website" class="work-item">
+                    <h4>This website</h4>
+                    <img src="img/web.png" alt="" class="bg-img">
+                </a>
+
+                <a href="#work-speedreader" class="work-item">
+                    <h4>jQuery speedreader</h4>
+                    <img src="img/speed.png" alt="" class="bg-img">
+                </a>
+
+                <a href="#work-tuner" class="work-item">
+                    <h4>Tuner-B</h4>
+                    <img src="img/tuner.png" alt="" class="bg-img">
+                </a>
+
+                <a href="#work-plogger" class="work-item">
+                    <h4>Plogger</h4>
+                    <img src="img/plogger.png" alt="" class="bg-img">
+                </a>
+            </div>
+        </li>
+
+        <li id="skills">
+            <a href="#skills" class="trigger"><i class="fa fa-wrench"></i><span class="title">My Skills</span></a>
+            <div class="content">
+                <h3>My Skills</h3>
+
+                <div class="skill">
+                    <h4>HTML5</h4>
+                </div>
+
+                <div class="skill">
+                    <h4>CSS3</h4>
+                </div>
+
+                <div class="skill">
+                    <h4>Javascript</h4>
+                </div>
+
+                <div class="skill">
+                    <h4>Node.js</h4>
+                </div>
+
+                <div class="skill">
+                    <h4>Various Frameworks</h4>
+                    <p>Including, but not limited to:
+                        <br> - CreateJS
+                        <br> - Three.js
+                        <br> - D3.JS
+                        <br> - BackBone
+                        <br> - Twitter Bootstrap
+                        <br> - jQuery
+                        <br>
+                        <br>And other stuff like:
+                        <br> - Grunt
+                        <br> - Gulp
+                        <br> - Git
+                        <br> - SVN
+                        <br> - Arduino
+                        <br> - Ajax
+                        <br> - Electronics
+                </div>
+
+                <div class="skill">
+                    <h4>Various CMS</h4>
+                    <p> - Expression Engine
+                        <br> - Concrete5
+                        <br> - Wordpress
+                        <br> - Drupal
+
+                </div>
+
+                <div class="skill">
+                    <h4>Adobe Creative Suite</h4>
+                    <p>
+                        - Adobe Photoshop
+                        <br> - Adobe After Effects
+                        <br> - Adobe Illustrator
+                        <br> - Adobe Flash
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h4>Various language basics</h4>
+                    <p> - PHP
+                        <br> - JS
+                        <br> - C
+                        <br> - C#
+                        <br> - Java
+                        <br> - Swift
+
+                </div>
+            </div>
+        </li>
+        <li id="contact">
+            <a href="#contact" class="trigger"><i class="fa fa-envelope"></i><span class="title">Contact Me</span></a>
+            <div class="content">
+                <h3>My Contact Information</h3>
+                <p>
+                    <br>
+                    <strong>Send me a mail:</strong> <a href="mailto:bartvanitterbeeck@gmail.com">bartvanitterbeeck@gmail.com</a>
+                    <br>
+                    <br>
+                    <strong>Send me a tweet:</strong> <a href="http://twitter.com/bartbarto">@BartBarto</a>
+                    <br>
+                    <br>
+                    <strong>Send me a job: </strong> <a href="https://www.linkedin.com/profile/view?id=87762872">Linkedin</a>
+                    <br>
+                    <br>
+                    <strong>Send me a letter:</strong> Willem Linnigstraat 11 - 2060 Antwerpen - Belgium
+                    <br>
+                    <br>
+                </p>
+            </div>
+        </li>
+        <!-- Work stuff -->
+        <li id="work-kuiper" class="work-info">
+            <a href="#work" class="work-back">Back to my work</a>
             <h4>Kine Kuipersstraat</h4>
             <p>
                 <strong>Link:</strong> <a href="http://kuiperskine.be">http://kuiperskine.be/</a>
@@ -116,8 +428,9 @@ RUN !!  It's a T-REX  !!!            `..:.:\     \:...\
                 <br>
                 <strong>Description:</strong> A website I designed and developed.
             </p>
-
-
+        </li>
+        <li id="work-tat" class="work-info">
+            <a href="#work" class="work-back">Back to my work</a>
             <h4>Time after Time - Poster &amp; Projection Design</h4>
             <p>
                 <strong>Link:</strong> <a href="https://www.behance.net/gallery/10547693/Time-after-Time-Concert-Poster-projection-design">Behance</a>
@@ -126,21 +439,22 @@ RUN !!  It's a T-REX  !!!            `..:.:\     \:...\
                 <br>
                 <strong>Description:</strong> A concert for which I designed the poster, the entrance tickets and the background projection.
             </p>
-
+        </li>
+        <li id="work-kermis" class="work-info">
+            <a href="#work" class="work-back">Back to my work</a>
             <h4>Kerm.is - everything</h4>
             <p>
                 <strong>Link:</strong> <a href="http://kermis.github.io">Website</a>
                 <br>
                 <strong>Technologies:</strong> Maxon Cinema4D, <a href="http://threejs.org">Three.js</a>, HTML5, CSS3, Javascript, Node.js, Websockets, <a href="http://createjs.com/">CreateJS</a>, Git, Adobe After Effects
                 <br>
-                <strong>Description:</strong> My Final Project for school. A 3D Carnival where you can drive in the bumper cars, shoot at stuff, fish for ducks, take a selfie, play basket like a pro and fly like a pilot.<br>
-                I made this together with Robbert Wolfs (<a href="https://twitter.com/misterwolfs">@MisterWolfs</a>), who made the basket game, the shooting game, and the main website.<br>
-                You can play these games using a Leap Motion, your smartphone, or just your mouse and keyboard.
+                <strong>Description:</strong> My Final Project for school. A 3D Carnival where you can drive in the bumper cars, shoot at stuff, fish for ducks, take a selfie, play basket like a pro and fly like a pilot.
+                <br> I made this together with Robbert Wolfs (<a href="https://twitter.com/misterwolfs">@MisterWolfs</a>), who made the basket game, the shooting game, and the main website.
+                <br> You can play these games using a Leap Motion, your smartphone, or just your mouse and keyboard.
             </p>
-
-
-            <h3>School Work</h3>
-
+        </li>
+        <li id="work-kinetic" class="work-info">
+            <a href="#work" class="work-back">Back to my work</a>
             <h4>Kinetic Typography - Bohemian Rhapsody</h4>
             <p>
                 <strong>Link:</strong> <a href="http://youtu.be/rWKzC89U7zg">Youtube</a> - <a href="http://vimeo.com/57232718">Vimeo</a>
@@ -149,8 +463,9 @@ RUN !!  It's a T-REX  !!!            `..:.:\     \:...\
                 <br>
                 <strong>Description:</strong> A "Lyric video" I made for my Web Compositing class.
             </p>
-
-
+        </li>
+        <li id="work-swag-swap" class="work-info">
+            <a href="#work" class="work-back">Back to my work</a>
             <h4>Website Development - Swag-Swap</h4>
             <p>
                 <strong>Link:</strong> <a href="http://swag-swap.herokuapp.com">Swag Swap</a>
@@ -159,7 +474,9 @@ RUN !!  It's a T-REX  !!!            `..:.:\     \:...\
                 <br>
                 <strong>Description:</strong> A website I made together with Lorenz Adriaensen (<a href="http://twitter.com/lrnzzz">@Lrnzzz</a>) as a school assignment.
             </p>
-
+        </li>
+        <li id="work-invaders" class="work-info">
+            <a href="#work" class="work-back">Back to my work</a>
             <h4>Game Development - Marvel Space Invaders</h4>
             <p>
                 <strong>Link:</strong> <a href="http://bartbarto.github.io/Marvel-Space-Invaders">Click here to play</a>
@@ -168,7 +485,9 @@ RUN !!  It's a T-REX  !!!            `..:.:\     \:...\
                 <br>
                 <strong>Description:</strong> A game I made for my Web Animation class.
             </p>
-
+        </li>
+        <li id="work-planes" class="work-info">
+            <a href="#work" class="work-back">Back to my work</a>
             <h4>Data visualisation - Planes Above Me</h4>
             <p>
                 <strong>Link:</strong> <a href="https://raw.githubusercontent.com/bartbarto/Planes-Above-Me/master/Planes-Above-Me.tiff">Image</a> - <a href="http://bartbarto.github.io/Planes-Above-Me/">Website</a>
@@ -177,18 +496,20 @@ RUN !!  It's a T-REX  !!!            `..:.:\     \:...\
                 <br>
                 <strong>Description:</strong> A visualisation of the planes flying above me in one week.
             </p>
-
-            <h3>Experiments</h3>
-
+        </li>
+        <li id="work-website" class="work-info">
+            <a href="#work" class="work-back">Back to my work</a>
             <h4>This website</h4>
             <p>
                 <strong>Link:</strong> <a href="https://github.com/bartbarto/bartbarto.github.io">Github</a>
                 <br>
-                <strong>Technologies:</strong> HTML5, CSS3, Javascript, <a href="https://developers.google.com/web/starter-kit/">Google web starter kit</a>, Canvas, Git
+                <strong>Technologies:</strong> HTML5, CSS3
                 <br>
-                <strong>Description:</strong> The website you're currently visiting.
+                <strong>Description:</strong> The website you're currently visiting. No Javascript required.
             </p>
-
+        </li>
+        <li id="work-speedreader" class="work-info">
+            <a href="#work" class="work-back">Back to my work</a>
             <h4>jQuery speedreader</h4>
             <p>
                 <strong>Link:</strong> <a href="https://github.com/bartbarto/jQuery_Speedreader">Github</a> - <a href="http://bartbarto.github.io/jQuery_Speedreader">Demo</a>
@@ -197,7 +518,9 @@ RUN !!  It's a T-REX  !!!            `..:.:\     \:...\
                 <br>
                 <strong>Description:</strong> A speedreader I built to test my jQuery skills.
             </p>
-
+        </li>
+        <li id="work-tuner" class="work-info">
+            <a href="#work" class="work-back">Back to my work</a>
             <h4>Tuner-B</h4>
             <p>
                 <strong>Link:</strong> <a href="https://github.com/bartbarto/Tuner-B">Github</a> - <a href="http://bartbarto.github.io/Tuner-B">Demo</a>
@@ -206,7 +529,9 @@ RUN !!  It's a T-REX  !!!            `..:.:\     \:...\
                 <br>
                 <strong>Description:</strong> A guitar tuner and visualizer with the WebAudio and GetUserMedia API's. requires Chrome or Firefox.
             </p>
-
+        </li>
+        <li id="work-plogger" class="work-info">
+            <a href="#work" class="work-back">Back to my work</a>
             <h4>Plogger</h4>
             <p>
                 <strong>Link:</strong> <a href="https://github.com/bartbarto/Plogger">Github</a>
@@ -215,93 +540,14 @@ RUN !!  It's a T-REX  !!!            `..:.:\     \:...\
                 <br>
                 <strong>Description:</strong> An iPhone app, to log your poo types. Made while trying to learn swift
             </p>
+        </li>
+    </ul>
 
-        </main>
-        <main id="skills">
-            <h3>My Skills</h3>
+    <!-- Because IE -->
+	<!--[if (gte IE 6)&(lte IE 8)]>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	  	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+	<![endif]-->
+</body>
 
-            <div class="skill">
-                <h4>HTML5</h4>
-            </div>
-
-            <div class="skill">
-                <h4>CSS3</h4>
-            </div>
-
-            <div class="skill">
-                <h4>Javascript</h4>
-            </div>
-
-            <div class="skill">
-                <h4>Node.js</h4>
-            </div>
-
-            <div class="skill">
-                <h4>Various Frameworks</h4>
-                <p>Including, but not limited to:
-                <br> - CreateJS
-                <br> - Three.js
-                <br> - D3.JS
-                <br> - BackBone
-                <br> - Twitter Bootstrap
-                <br> - jQuery
-                <br>
-                <br>And other stuff like:
-                <br> - Grunt
-                <br> - Gulp
-                <br> - Git
-                <br> - SVN
-            </div>
-
-            <div class="skill">
-                <h4>Various CMS</h4>
-                <p> - Expression Engine
-                <br> - Concrete5
-                <br> - Wordpress
-                <br> - Drupal
-
-            </div>
-
-            <div class="skill">
-                <h4>Adobe Creative Suite</h4>
-                <p>
-                    - Adobe Photoshop
-                   <br> - Adobe After Effects
-                   <br> - Adobe Illustrator
-                   <br> - Adobe Flash
-                </p>
-            </div>
-
-        </main>
-        <main id="contact">
-            <h3>My Contact Information</h3>
-            <p>
-                <br>
-                <strong>Send me a mail:</strong> <a href="mailto:bartvanitterbeeck@gmail.com">bartvanitterbeeck@gmail.com</a>
-                <br><br>
-                <strong>Send me a tweet:</strong> <a href="http://twitter.com/bartbarto">@BartBarto</a>
-                <br><br>
-                <strong>Send me a job: </strong> <a href="https://www.linkedin.com/profile/view?id=87762872">Linkedin</a>
-                <br><br>
-                <strong>Send me a letter:</strong> Willem Linnigstraat 11 - 2060 Antwerpen - Belgium
-                <br><br>
-            </p>
-        </main>
-
-
-        <!-- build:js scripts/main.min.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-        <!-- Built with love using Web Starter Kit -->
-    </body>
 </html>
