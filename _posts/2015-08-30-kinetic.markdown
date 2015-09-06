@@ -4,10 +4,15 @@ title:  "Kinetic Typography"
 subtitle:  "Bohemian Rhapsody"
 date:   2015-08-30 11:04:23
 categories: Motion-graphics design
-main-img: 'kinetic.png'
 small-img: 'kinetic.png'
 link: http://youtu.be/rWKzC89U7zg
 permalink: /work/kinetic-typography
 ---
+
+<div class="post-main-img">
+<iframe src="https://www.youtube.com/embed/rWKzC89U7zg" frameborder="0" allowfullscreen></iframe>
+</div>
+<br>
+
 A "Lyric video" I made for my Web Compositing class.
 100k+ views

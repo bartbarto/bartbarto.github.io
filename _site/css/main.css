@@ -530,7 +530,7 @@ a.social {
     position: relative;
     border: solid white 4px;
     border-radius: 10px; }
-    .post .post-main-img .img {
+    .post .post-main-img .img, .post .post-main-img iframe {
       border-radius: 6px;
       position: absolute;
       background-size: cover;
