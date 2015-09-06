@@ -1,0 +1,665 @@
+/**
+ * Site header
+ */
+nav{
+   @include center-content;
+}
+.site-header {
+    // border-top: 5px solid $grey-color-dark;
+    // border-bottom: 1px solid $grey-color-light;
+    // min-height: 56px;
+    padding: 0;
+    margin: 0 auto;
+
+    background: #444;
+
+    // Positioning context for the mobile navigation icon
+    position: relative;
+
+    .nav-item{
+        color: #aaa;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        width: 25%;
+        display: block;
+        float: left;
+        text-align: center;
+        padding: .8em;
+        background: #444;
+        z-index: 100;
+        font-size: 12pt;
+        .title{
+            display: block;
+        }
+        i{
+            display: none;
+        }
+        a{
+            color: #aaa;
+            &:hover{
+                color: #CCC;
+                text-decoration: none;
+            }
+        }
+    }
+    border-bottom: solid rgba(255,255,255,0.6) 1px;
+}
+
+@include media-query($on-palm) {
+    .site-header {
+        .nav-item{
+            padding-bottom: 4px;
+            .title{
+                font-size: 8pt;
+                padding-top: 8px;
+                .n-n{
+                    display: none;
+                }
+            }
+            i{
+                display: block;
+            }
+            border-right: solid rgba(255,255,255,0.4) 1px;
+            &:last-child{
+                border-right: none;
+            }
+        }
+    }
+}
+
+#about{
+
+    @include center-content;
+
+    min-height: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    .left{
+        min-height: 100%;
+        width: 50%;
+        float: left;
+        padding: 10%;
+        .me{
+            padding-top: 20%;
+            border: solid white 7px;
+            border-radius: 90%;
+            background-image: url('/img/me.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            float: right;
+            width: 200px;
+            height: 200px;
+            background-position: center center;
+        }
+    }
+    .right{
+        padding: 15px;
+        width: 50%;
+        float: right;
+    }
+    .bottom{
+        width: 70%;
+        margin: 0 15%;
+        float: left;
+        clear: both;
+        // background: red;
+        a.social{
+            width: 20%;
+        }
+        }
+}
+
+a.social{
+    display:block;
+    float: left;
+    text-align: center;
+    font-size: 18pt;
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    i.fa.fa-twitter-square{
+        color: #55acee;
+    }
+    i.fa.fa-linkedin-square{
+        color: #0077b5;
+    }
+     i.fa.fa-github-square{
+        color: #333333;
+    }
+    i.fa.fa-facebook-square{
+        color: #3b5998;
+    }
+    i.fa.fa-google-plus-square{
+        color: #dd4b39;
+    }
+    i.fa.fa-pinterest-square{
+        color: #cc2127;
+    }
+    i.fa.fa-square.mail{
+        color: #999;
+    }
+    &:hover{
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
+}
+
+@include media-query($on-palm) {
+    #about{
+        max-width: 100%;
+        .right{
+            width: 100%;
+            padding: 30px;
+        }
+        .left{
+            width: 100%;
+            padding: 4% 10%;
+            text-align: center;
+            .me{
+                margin-left: calc(50%-60px);
+                float: left;
+                width: 120px;
+                height: 120px;
+            }
+        }
+        .bottom{
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+
+#work{
+    border-top: solid rgba(255,255,255, 0.7) 1px;
+    background: #34495E;
+    padding: 15px;
+    color: #EFEFEF;
+    a{
+        color: #EFEFEF;
+    }
+    .content{
+        @include center-content;
+    }
+    .page-heading{
+        font-size: 24pt;
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: 2px;
+        padding: 10px;
+    }
+    .categories{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 9pt;
+        // font-variant: small-caps;
+        margin-bottom: 10px;
+        .divider{
+            margin: 0 5px 0 5px;
+            &:last-child{
+                display: none;
+            }
+        }
+    }
+
+    .work-list{
+
+        .work-item{
+            width: 33.33%;
+            float: left;
+             opacity: 0.8;
+             -webkit-transition: opacity 0.15s;
+            transition: opacity 0.15s;
+            -webkit-tranform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+
+            &:hover{
+                opacity: 1;
+            }
+            .image{
+                margin: 5%;
+                width: 90%;
+                background-size: cover;
+                background-position: center center;
+                height: auto;
+            }
+            .text{
+                margin: 5%;
+                width: 90%;
+                text-align: center;
+                h2{
+                    text-transform: uppercase;
+                    font-size: 12pt;
+                    letter-spacing: 0.05em;
+                }
+            }
+        }
+        a{
+            color: #FFF;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    }
+    i.fa.fa-square.rss{
+        color: #f26522;
+    }
+    .rss-subscribe{
+        width: 100%;
+        text-align: right;
+        float: left;
+        @include center-content;
+        opacity: 0.4;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+
+#skills{
+    border-top: solid rgba(255,255,255, 0.7) 1px;
+    padding: 15px;
+    color: #444;
+    background-color: rgba(141, 198, 255, 0.2);
+    a{
+        color: #444;
+    }
+    .content{
+        @include center-content;
+    }
+    .page-heading{
+        font-size: 24pt;
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: 2px;
+        padding: 10px;
+    }
+
+    h2{
+        font-weight: 400;
+    }
+
+    .skill{
+        -webkit-filter: blur(0px);
+        position: relative;
+        padding: 10px;
+        text-align: center;
+        background-color: white;
+        float: left;
+        clear: both;
+        margin-bottom: 10px;
+        // transition: all 250ms;
+        // -webkit-transition: all 250ms;
+        overflow: hidden;
+        small{
+            opacity: 0.5;
+        }
+        .description{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            background-color: #444;
+            transition: left 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -webkit-transition: left 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -ms-transition: left 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -o-transition: left 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -moz-transition: left 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            left: -100%;
+            &.active{
+                left: 0 !important;
+            }
+            // left: 0;
+        }
+    }
+}
+
+#contact{
+    border-top: solid rgba(255,255,255, 0.2) 1px;
+    padding: 15px;
+    color: #444;
+    a{
+        color: #444;
+    }
+    .content{
+        @include center-content;
+    }
+    .page-heading{
+        font-size: 24pt;
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: 2px;
+        padding: 10px;
+    }
+
+    a.social{
+        width: 14.285714286%;
+    }
+}
+.home{
+    // float: left;
+    // width: 100%;
+    clear: both;
+}
+
+.site-title {
+    font-size: 26px;
+    line-height: 56px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: left;
+
+    &,
+    &:visited {
+        color: $grey-color-dark;
+    }
+}
+
+.site-nav {
+    float: right;
+    line-height: 56px;
+
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: $text-color;
+        line-height: $base-line-height;
+
+        // Gaps between nav items, but not on the first one
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+
+    @include media-query($on-palm) {
+        position: absolute;
+        top: 9px;
+        right: 30px;
+        background-color: $background-color;
+        border: 1px solid $grey-color-light;
+        border-radius: 5px;
+        text-align: right;
+
+        .menu-icon {
+            display: block;
+            float: right;
+            width: 36px;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
+
+            > svg {
+                width: 18px;
+                height: 15px;
+
+                path {
+                    fill: $grey-color-dark;
+                }
+            }
+        }
+
+        .trigger {
+            clear: both;
+            display: none;
+        }
+
+        &:hover .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .page-link {
+            display: block;
+            padding: 5px 10px;
+        }
+    }
+}
+
+
+
+/**
+ * Site footer
+ */
+.post{
+    min-height: 100%;
+    .wrapper{
+        @include center-content;
+    }
+    padding: 15px;
+    a h1{
+        color: #444;
+    }
+    a{
+        position: relative;
+        color: inherit;
+        width: auto;
+        color: darkblue;
+        &:hover{
+            text-decoration: none;
+            &:before{
+                content: '\25B6';
+                height: 20px;
+                position: absolute;
+                margin-left: -22px;
+                top: 40%;
+                top: calc(50% - 10px);
+            }
+        }
+    }
+    .post-main-img{
+        width: 50%;
+        min-height: 200px;
+        position: relative;
+        // margin: auto;
+        border: solid white 4px;
+        border-radius: 10px;
+        .img{
+            border-radius: 6px;
+            position: absolute;
+            background-size: cover;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @include media-query($on-palm) {
+        .post-main-img{
+            width: 100%;
+        }
+        a{
+            text-decoration: underline;
+         &:hover{
+            &:before{
+                content: '';
+            }
+         }
+        }
+    }
+
+    .post-content{
+        img{
+            width: 20%;
+            border: solid white 4px;
+            border-radius: 6px;
+            margin-right: 15px;
+        }
+    }
+}
+.site-footer {
+    border-top: 1px solid $grey-color-light;
+    padding: $spacing-unit 0;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    background: #FFF;
+    .wrapper{
+        @include center-content;
+    }
+}
+
+.footer-heading {
+    font-size: 18px;
+    margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.footer-col-wrapper {
+    font-size: 15px;
+    color: $grey-color;
+    margin-left: -$spacing-unit / 2;
+    @extend %clearfix;
+}
+
+.footer-col {
+    float: left;
+    margin-bottom: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+    width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+    width:         calc(45% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+    .footer-col-1,
+    .footer-col-2 {
+        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+        width:         calc(50% - (#{$spacing-unit} / 2));
+    }
+
+    .footer-col-3 {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+@include media-query($on-palm) {
+    .footer-col {
+        float: none;
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+
+
+/**
+ * Page content
+ */
+.page-content {
+    padding: $spacing-unit 0;
+    min-height: 100%;
+}
+
+.page-heading {
+    font-size: 20px;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+
+.heart{
+    color:#90000F;
+}
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+    // text-transform: uppercase;
+    font-variant: small-caps;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-title-small {
+    font-size: 22px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}
+
+// .longshadow {
+//   text-shadow: 0px 0px #999, 1px 1px #999, 2px 2px #999, 3px 3px #999, 4px 4px #999, 5px 5px #999, 6px 6px #999, 7px 7px #999, 8px 8px #999, 9px 9px #999, 10px 10px #999, 11px 11px #999, 12px 12px #999, 13px 13px #999, 14px 14px #999, 15px 15px #999, 16px 16px #999, 17px 17px #999, 18px 18px #999, 19px 19px #999, 20px 20px #999, 21px 21px #999, 22px 22px #999, 23px 23px #999, 24px 24px #999, 25px 25px #999, 26px 26px #999, 27px 27px #999, 28px 28px #999, 29px 29px #999, 30px 30px #999, 31px 31px #999, 32px 32px #999, 33px 33px #999, 34px 34px #999, 35px 35px #999, 36px 36px #999, 37px 37px #999, 38px 38px #999, 39px 39px #999, 40px 40px #999, 41px 41px #999, 42px 42px #999, 43px 43px #999, 44px 44px #999, 45px 45px #999, 46px 46px #999, 47px 47px #999, 48px 48px #999, 49px 49px #999, 50px 50px #999, 51px 51px #999, 52px 52px #999, 53px 53px #999, 54px 54px #999, 55px 55px #999, 56px 56px #999, 57px 57px #999, 58px 58px #999, 59px 59px #999, 60px 60px #999, 61px 61px #999, 62px 62px #999, 63px 63px #999, 64px 64px #999, 65px 65px #999, 66px 66px #999, 67px 67px #999, 68px 68px #999, 69px 69px #999, 70px 70px #999, 71px 71px #999, 72px 72px #999, 73px 73px #999, 74px 74px #999, 75px 75px #999, 76px 76px #999, 77px 77px #999, 78px 78px #999, 79px 79px #999, 80px 80px #999, 81px 81px #999, 82px 82px #999, 83px 83px #999, 84px 84px #999, 85px 85px #999, 86px 86px #999, 87px 87px #999, 88px 88px #999, 89px 89px #999, 90px 90px #999, 91px 91px #999, 92px 92px #999, 93px 93px #999, 94px 94px #999, 95px 95px #999, 96px 96px #999, 97px 97px #999, 98px 98px #999, 99px 99px #999, 100px 100px #999, 101px 101px #999, 102px 102px #999, 103px 103px #999, 104px 104px #999, 105px 105px #999, 106px 106px #999, 107px 107px #999, 108px 108px #999, 109px 109px #999, 110px 110px #999, 111px 111px #999, 112px 112px #999, 113px 113px #999, 114px 114px #999, 115px 115px #999, 116px 116px #999, 117px 117px #999, 118px 118px #999, 119px 119px #999, 120px 120px #999, 121px 121px #999, 122px 122px #999, 123px 123px #999, 124px 124px #999, 125px 125px #999, 126px 126px #999, 127px 127px #999, 128px 128px #999, 129px 129px #999, 130px 130px #999, 131px 131px #999, 132px 132px #999, 133px 133px #999, 134px 134px #999, 135px 135px #999, 136px 136px #999, 137px 137px #999, 138px 138px #999, 139px 139px #999, 140px 140px #999, 141px 141px #999, 142px 142px #999, 143px 143px #999, 144px 144px #999, 145px 145px #999, 146px 146px #999, 147px 147px #999, 148px 148px #999, 149px 149px #999, 150px 150px #999, 151px 151px #999, 152px 152px #999, 153px 153px #999, 154px 154px #999, 155px 155px #999, 156px 156px #999, 157px 157px #999, 158px 158px #999, 159px 159px #999, 160px 160px #999, 161px 161px #999, 162px 162px #999, 163px 163px #999, 164px 164px #999, 165px 165px #999, 166px 166px #999, 167px 167px #999, 168px 168px #999, 169px 169px #999, 170px 170px #999, 171px 171px #999, 172px 172px #999, 173px 173px #999, 174px 174px #999, 175px 175px #999, 176px 176px #999, 177px 177px #999, 178px 178px #999, 179px 179px #999, 180px 180px #999, 181px 181px #999, 182px 182px #999, 183px 183px #999, 184px 184px #999, 185px 185px #999, 186px 186px #999, 187px 187px #999, 188px 188px #999, 189px 189px #999, 190px 190px #999, 191px 191px #999, 192px 192px #999, 193px 193px #999, 194px 194px #999, 195px 195px #999, 196px 196px #999, 197px 197px #999, 198px 198px #999, 199px 199px #999, 200px 200px #999, 201px 201px #999, 202px 202px #999, 203px 203px #999, 204px 204px #999, 205px 205px #999, 206px 206px #999, 207px 207px #999, 208px 208px #999, 209px 209px #999, 210px 210px #999, 211px 211px #999, 212px 212px #999, 213px 213px #999, 214px 214px #999, 215px 215px #999, 216px 216px #999, 217px 217px #999, 218px 218px #999, 219px 219px #999, 220px 220px #999, 221px 221px #999, 222px 222px #999, 223px 223px #999, 224px 224px #999, 225px 225px #999, 226px 226px #999, 227px 227px #999, 228px 228px #999, 229px 229px #999, 230px 230px #999, 231px 231px #999, 232px 232px #999, 233px 233px #999, 234px 234px #999, 235px 235px #999, 236px 236px #999, 237px 237px #999, 238px 238px #999, 239px 239px #999, 240px 240px #999, 241px 241px #999, 242px 242px #999, 243px 243px #999, 244px 244px #999, 245px 245px #999, 246px 246px #999, 247px 247px #999, 248px 248px #999, 249px 249px #999, 250px 250px #999, 251px 251px #999, 252px 252px #999, 253px 253px #999, 254px 254px #999, 255px 255px #999, 256px 256px #999, 257px 257px #999, 258px 258px #999, 259px 259px #999, 260px 260px #999, 261px 261px #999, 262px 262px #999, 263px 263px #999, 264px 264px #999, 265px 265px #999, 266px 266px #999, 267px 267px #999, 268px 268px #999, 269px 269px #999, 270px 270px #999, 271px 271px #999, 272px 272px #999, 273px 273px #999, 274px 274px #999, 275px 275px #999, 276px 276px #999, 277px 277px #999, 278px 278px #999, 279px 279px #999, 280px 280px #999, 281px 281px #999, 282px 282px #999, 283px 283px #999, 284px 284px #999, 285px 285px #999, 286px 286px #999, 287px 287px #999, 288px 288px #999, 289px 289px #999, 290px 290px #999, 291px 291px #999, 292px 292px #999, 293px 293px #999, 294px 294px #999, 295px 295px #999, 296px 296px #999, 297px 297px #999, 298px 298px #999, 299px 299px #999, 300px 300px #999, 301px 301px #999, 302px 302px #999, 303px 303px #999, 304px 304px #999, 305px 305px #999, 306px 306px #999, 307px 307px #999, 308px 308px #999, 309px 309px #999, 310px 310px #999, 311px 311px #999, 312px 312px #999, 313px 313px #999, 314px 314px #999, 315px 315px #999, 316px 316px #999, 317px 317px #999, 318px 318px #999, 319px 319px #999, 320px 320px #999, 321px 321px #999, 322px 322px #999, 323px 323px #999, 324px 324px #999, 325px 325px #999, 326px 326px #999, 327px 327px #999, 328px 328px #999, 329px 329px #999, 330px 330px #999, 331px 331px #999, 332px 332px #999, 333px 333px #999, 334px 334px #999, 335px 335px #999, 336px 336px #999, 337px 337px #999, 338px 338px #999, 339px 339px #999, 340px 340px #999, 341px 341px #999, 342px 342px #999, 343px 343px #999, 344px 344px #999, 345px 345px #999, 346px 346px #999, 347px 347px #999, 348px 348px #999, 349px 349px #999, 350px 350px #999, 351px 351px #999, 352px 352px #999, 353px 353px #999, 354px 354px #999, 355px 355px #999, 356px 356px #999, 357px 357px #999, 358px 358px #999, 359px 359px #999, 360px 360px #999, 361px 361px #999, 362px 362px #999, 363px 363px #999, 364px 364px #999, 365px 365px #999, 366px 366px #999, 367px 367px #999, 368px 368px #999, 369px 369px #999, 370px 370px #999, 371px 371px #999, 372px 372px #999, 373px 373px #999, 374px 374px #999, 375px 375px #999, 376px 376px #999, 377px 377px #999, 378px 378px #999, 379px 379px #999, 380px 380px #999, 381px 381px #999, 382px 382px #999, 383px 383px #999, 384px 384px #999, 385px 385px #999, 386px 386px #999, 387px 387px #999, 388px 388px #999, 389px 389px #999, 390px 390px #999, 391px 391px #999, 392px 392px #999, 393px 393px #999, 394px 394px #999, 395px 395px #999, 396px 396px #999, 397px 397px #999, 398px 398px #999, 399px 399px #999, 400px 400px #999; }

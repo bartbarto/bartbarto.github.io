@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Kerm.is"
+subtitle:  "Full stack development"
+date:   2015-08-30 12:04:23
+categories: 3D web html css js webgl
+main-img: 'kermis.png'
+small-img: 'kermis.png'
+link: http://kerm.is
+permalink: /work/:title
+---
+
+My Final Project for school.
+
+A 3D Carnival where you can drive in the bumper cars, shoot at stuff, fish for ducks, take a selfie, play basket like a pro and fly like a pilot.
+I made this together with Robbert Wolfs (
+[@MisterWolfs][wolfs]
+), who made the basket game, the shooting game, and the main website.
+You can play these games using a Leap Motion, your smartphone, or just your mouse and keyboard.
+
+<!-- [Link][link] -->
+
+[link]: 		http://kerm.is
+[wolfs]: 		https://twitter.com/misterwolfs

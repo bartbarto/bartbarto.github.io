@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "CSS Sonic Screwdriver"
+subtitle:  "CSS image recreation"
+date:   2013-07-25 11:34:23
+categories: css html experiments
+main-img: 'cssss.png'
+small-img: 'cssss.png'
+link: http://codepen.io/bartbarto/full/XmJOGE/
+permalink: /work/:title
+---
+A Doctor Who 11th doctor sonic screwdriver image, entirely recreated with only css and html.

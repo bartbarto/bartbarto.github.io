@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "Various"
+subtitle:  "Experiments"
+date:   1984-01-22 11:34:23
+categories: html css js
+main-img: 'github-mark.png'
+small-img: 'github-mark.png'
+link: http://github.com/bartbarto
+permalink: /work/:title
+---
+Various experiments or little apps / games I made.
+
+[![Space invaders image][invaders-img] Space Invaders canvas clone][invaders] ([github][invaders-gh])
+
+
+[![Speedreader image][speedread-img] jQuery Speedreader][speedread] ([github][speedread-gh])
+
+
+[![Website img][website-img] This website][website] ([github][website-gh])
+
+
+[invaders]: http://bartbarto.github.io/Marvel-Space-Invaders
+[invaders-gh]: https://github.com/bartbarto/Marvel-Space-Invaders
+[invaders-img]: /img/invaders.png
+
+[speedread]: http://bartbarto.github.io/jQuery_Speedreader
+[speedread-gh]: https://github.com/bartbarto/jQuery_Speedreader
+[speedread-img]: /img/speed.png
+
+[website]: http://bartbarto.github.io/
+[website-gh]: https://github.com/bartbarto/bartbarto.github.io
+[website-img]: /img/web.png

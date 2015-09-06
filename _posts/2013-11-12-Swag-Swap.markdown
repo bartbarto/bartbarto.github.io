@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Swag-Swap"
+subtitle:  "Full Stack development"
+date:   2013-11-12 11:34:23
+categories: html Node.js
+main-img: 'swag.png'
+small-img: 'swag.png'
+link: http://swag-swap.herokuapp.com/
+permalink: /work/:title
+---
+A website I made together with Lorenz Adriaensen ([@Lrnzzz][lrnzzz]) as a school assignment.
+
+The idea was that you would be able to share clothing you no longer needed with people nearby.
+Based on a rating system you could then swap your items with similiarly rated items.
+
+[Github][github]
+
+
+[lrnzzz]: https://twitter.com/lrnzzz
+[github]: https://github.com/lrnzzz/swag-swap
