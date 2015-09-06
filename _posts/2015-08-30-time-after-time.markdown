@@ -7,7 +7,7 @@ categories: design Motion-Graphics
 main-img: 'time.png'
 small-img: 'time.png'
 link: https://www.behance.net/gallery/10547693/Time-after-Time-Concert-Poster-projection-design
-permalink: /work/:title
+permalink: /work/time-after-time
 
 ---
 A concert for which I designed the poster, the entrance tickets and the background projection.

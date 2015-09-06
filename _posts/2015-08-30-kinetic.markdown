@@ -7,7 +7,7 @@ categories: Motion-graphics design
 main-img: 'kinetic.png'
 small-img: 'kinetic.png'
 link: http://youtu.be/rWKzC89U7zg
-permalink: /work/:title
+permalink: /work/kinetic-typography
 ---
 A "Lyric video" I made for my Web Compositing class.
 100k+ views

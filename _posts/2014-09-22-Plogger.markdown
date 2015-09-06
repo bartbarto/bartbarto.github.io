@@ -7,6 +7,6 @@ categories: swift experiments
 main-img: 'plogger.png'
 small-img: 'plogger.png'
 link: https://github.com/bartbarto/Plogger
-permalink: /work/:title
+permalink: /work/plogger
 ---
 An iPhone app, to log your poo types. Made while learning swift.

@@ -7,7 +7,7 @@ categories: html css js
 main-img: 'github-mark.png'
 small-img: 'github-mark.png'
 link: http://github.com/bartbarto
-permalink: /work/:title
+permalink: /work/various
 ---
 Various experiments or little apps / games I made.
 

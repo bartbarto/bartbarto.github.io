@@ -7,7 +7,7 @@ categories: web cms html css
 main-img: 'kine.png'
 small-img: 'kine.png'
 link: https://kuiperskine.be
-permalink: /work/:title
+permalink: /work/kuiperskine
 
 ---
 A website I designed and developed Using the concrete5 framework.

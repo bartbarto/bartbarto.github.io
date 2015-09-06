@@ -6,8 +6,8 @@
 </description>
     <link>http://bartvi.be/</link>
     <atom:link href="http://bartvi.be/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Sep 2015 15:02:59 +0200</pubDate>
-    <lastBuildDate>Sun, 06 Sep 2015 15:02:59 +0200</lastBuildDate>
+    <pubDate>Mon, 07 Sep 2015 00:34:29 +0200</pubDate>
+    <lastBuildDate>Mon, 07 Sep 2015 00:34:29 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -24,8 +24,8 @@ You can play these games using a Leap Motion, your smartphone, or just your mous
 
 </description>
         <pubDate>Sun, 30 Aug 2015 14:04:23 +0200</pubDate>
-        <link>http://bartvi.be/work/kerm-is</link>
-        <guid isPermaLink="true">http://bartvi.be/work/kerm-is</guid>
+        <link>http://bartvi.be/work/kerm.is</link>
+        <guid isPermaLink="true">http://bartvi.be/work/kerm.is</guid>
         
         
         <category>3d</category>
@@ -62,8 +62,8 @@ You can play these games using a Leap Motion, your smartphone, or just your mous
         <description>&lt;p&gt;A visualisation of the planes flying above me in one week.&lt;/p&gt;
 </description>
         <pubDate>Sun, 30 Aug 2015 13:34:23 +0200</pubDate>
-        <link>http://bartvi.be/work/planes</link>
-        <guid isPermaLink="true">http://bartvi.be/work/planes</guid>
+        <link>http://bartvi.be/work/planes-above-me</link>
+        <guid isPermaLink="true">http://bartvi.be/work/planes-above-me</guid>
         
         
         <category>design</category>
@@ -104,8 +104,8 @@ You can play these games using a Leap Motion, your smartphone, or just your mous
 100k+ views&lt;/p&gt;
 </description>
         <pubDate>Sun, 30 Aug 2015 13:04:23 +0200</pubDate>
-        <link>http://bartvi.be/work/kinetic</link>
-        <guid isPermaLink="true">http://bartvi.be/work/kinetic</guid>
+        <link>http://bartvi.be/work/kinetic-typography</link>
+        <guid isPermaLink="true">http://bartvi.be/work/kinetic-typography</guid>
         
         
         <category>motion-graphics</category>
@@ -119,8 +119,8 @@ You can play these games using a Leap Motion, your smartphone, or just your mous
         <description>&lt;p&gt;An iPhone app, to log your poo types. Made while learning swift.&lt;/p&gt;
 </description>
         <pubDate>Mon, 22 Sep 2014 13:34:23 +0200</pubDate>
-        <link>http://bartvi.be/work/Plogger</link>
-        <guid isPermaLink="true">http://bartvi.be/work/Plogger</guid>
+        <link>http://bartvi.be/work/plogger</link>
+        <guid isPermaLink="true">http://bartvi.be/work/plogger</guid>
         
         
         <category>swift</category>
@@ -139,8 +139,8 @@ You can play these games using a Leap Motion, your smartphone, or just your mous
 
 </description>
         <pubDate>Mon, 23 Jun 2014 13:34:23 +0200</pubDate>
-        <link>http://bartvi.be/work/Tuner-B</link>
-        <guid isPermaLink="true">http://bartvi.be/work/Tuner-B</guid>
+        <link>http://bartvi.be/work/tuner-b</link>
+        <guid isPermaLink="true">http://bartvi.be/work/tuner-b</guid>
         
         
         <category>html</category>
@@ -162,8 +162,8 @@ Based on a rating system you could then swap your items with similiarly rated it
 
 </description>
         <pubDate>Tue, 12 Nov 2013 12:34:23 +0100</pubDate>
-        <link>http://bartvi.be/work/Swag-Swap</link>
-        <guid isPermaLink="true">http://bartvi.be/work/Swag-Swap</guid>
+        <link>http://bartvi.be/work/swag-swap</link>
+        <guid isPermaLink="true">http://bartvi.be/work/swag-swap</guid>
         
         
         <category>html</category>
@@ -201,8 +201,8 @@ Based on a rating system you could then swap your items with similiarly rated it
 
 </description>
         <pubDate>Sun, 22 Jan 1984 12:34:23 +0100</pubDate>
-        <link>http://bartvi.be/work/Various</link>
-        <guid isPermaLink="true">http://bartvi.be/work/Various</guid>
+        <link>http://bartvi.be/work/various</link>
+        <guid isPermaLink="true">http://bartvi.be/work/various</guid>
         
         
         <category>html</category>

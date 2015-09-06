@@ -7,7 +7,7 @@ categories: design html js css web
 main-img: 'planes.png'
 small-img: 'planes.png'
 link: https://www.behance.net/gallery/10547693/Time-after-Time-Concert-Poster-projection-design
-permalink: /work/:title
+permalink: /work/planes-above-me
 
 ---
 A visualisation of the planes flying above me in one week.

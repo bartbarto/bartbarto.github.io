@@ -7,7 +7,7 @@ categories: html css js
 main-img: 'tuner.png'
 small-img: 'tuner.png'
 link: http://bartbarto.github.io/Tuner-B
-permalink: /work/:title
+permalink: /work/tuner-b
 ---
 A basic tuner/visualizer for tuning your Guitar or ukulele.
 

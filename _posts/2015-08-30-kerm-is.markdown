@@ -7,7 +7,7 @@ categories: 3D web html css js webgl
 main-img: 'kermis.png'
 small-img: 'kermis.png'
 link: http://kerm.is
-permalink: /work/:title
+permalink: /work/kerm.is
 ---
 
 My Final Project for school.

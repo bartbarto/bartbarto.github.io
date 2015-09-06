@@ -7,7 +7,7 @@ categories: html Node.js
 main-img: 'swag.png'
 small-img: 'swag.png'
 link: http://swag-swap.herokuapp.com/
-permalink: /work/:title
+permalink: /work/swag-swap
 ---
 A website I made together with Lorenz Adriaensen ([@Lrnzzz][lrnzzz]) as a school assignment.
 
