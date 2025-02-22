@@ -1,208 +1,28 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div id="about">
-  <div class="left">
-    <div class="me" title="Look! A candid photo."></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bart</title>
+  <link rel=" stylesheet" href="css/style.css" />
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<body>
+  <div id="bg">
+    <canvas id="bg-canvas"></canvas>
   </div>
-  <div class="right">
-    <h1>Bart Van Itterbeeck</h1>
-      <p>
-        Hi, I'm <strong>Bart</strong>, currently a <strong>Developer</strong> at Artcore Society.
-       <br>
-        I've always been fascinated by technology and the internet, and I decided that I wanted to make the internet my workplace.
-      </p>
-      I have made some fun projects using WebGL, Canvas, Node.js and others. You can see some of my work <a href="#work">here</a>.
-  </div>
-  <div class="bottom">
-    <a href="https://twitter.com/{{ site.twitter_username }}" class="social">
-      <span class="fa-stack">
-        <!-- <i class="fa fa-square twitter fa-stack-2x"></i> -->
-        <i class="fa fa-twitter-square fa-stack-2x fa-inverse"></i>
-      </span>
-    </a>
-    <a href="https://github.com/{{ site.github_username }}" class="social">
-      <span class="fa-stack">
-        <!-- <i class="fa fa-square github fa-stack-2x"></i> -->
-        <i class="fa fa-github-square fa-stack-2x fa-inverse"></i>
-      </span>
-    </a>
-    <a href="https://facebook.com/{{ site.facebook_username }}" class="social">
-      <span class="fa-stack">
-        <!-- <i class="fa fa-square facebook fa-stack-2x"></i> -->
-        <i class="fa fa-facebook-square fa-stack-2x fa-inverse"></i>
-      </span>
-    </a>
-    <!-- <a href="https://pinterest.com/{{ site.pinterest_username }}" class="social">
-      <span class="fa-stack">
-        <i class="fa fa-pinterest-square fa-stack-2x fa-inverse"></i>
-      </span>
-    </a> -->
-    <a href="https://plus.google.com/u/0/{{ site.google_plus_id }}" class="social">
-      <span class="fa-stack">
-        <!-- <i class="fa fa-square google-plus fa-stack-2x"></i> -->
-        <i class="fa fa-google-plus-square fa-stack-2x fa-inverse"></i>
-      </span>
-    </a>
-    <a href="mailto:{{ site.email }}" class="social">
-      <span class="fa-stack">
-        <i class="fa fa-square mail fa-stack-2x"></i>
-        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-    <!-- <a href=""><i class="fa fa-twitter"></i></a>
-    <a href=""><i class="fa fa-twitter"></i></a>
-    <a href=""><i class="fa fa-twitter"></i></a> -->
-  </div>
-</div>
-
-<div class="home" id="work">
-  <div class="content">
-    <h1 class="page-heading">Work</h1>
-
-    <div class="categories">
-      {% for category in site.categories %}
-          <a title="I made this." class="category" href="#category_{{ category | first }}">{{ category | first }}</a><span class="divider">&nbsp;/</span>
-      {% endfor %}
+  <div id="main">
+    <nav class="glass"></nav>
+    <div style="background-image: url('favicon.png')" title="Pixelated representation of me"  class="photo glass shine"></div>
+    <div class="glass name shine">
+      <h1>Bart Van Itterbeeck</h1>
     </div>
-    <div class="work-list">
-      {% for post in site.posts %}
-        <div class="work-item">
-           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" data-categories=" {% for cat in post.categories %}{{cat}}/{% endfor %}">
-          <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
-          <div class="image" style="background-image:url('/img/{{post.small-img}}')"><br><br><br><br></div>
-          <div class="text">
-            <h2>
-             {{ post.title }}
-            </h2>
-            <!-- <p>{{ post.content | strip_html | truncatewords:12 }}</p> -->
-          </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
+  <script src="js/main.js"></script>
+</body>
 
-    <div class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-
-    <span class="fa-stack">
-        <i class="fa fa-square rss fa-stack-2x"></i>
-        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-      </span></a>
-
-      </div>
-  </div>
-</div>
-
-
-<div id="skills">
-  <div class="content">
-    <h1 class="page-heading">Skills</h1>
-    <h2>Web related</h2>
-
-      <div class="skill html" style="width: 95%;" data-info="HTML5 compliant semantic HTML">
-        HTML
-      </div>
-
-    <div class="skill css" style="width: 90%;" data-info="Clean CSS, LESS or SASS, with animations">
-      CSS
-    </div>
-
-    <div class="skill js" style="width: 75%;" data-info="Clean readable javascript">
-      JS
-    </div>
-
-    <div class="skill node" style="width: 85%;" data-info="Full back-end development">
-      Node.js
-    </div>
-
-    <div class="skill webgl" style="width: 90%;" data-info="Interactive 3D applications">
-      WebGL / Three.js
-    </div>
-
-    <div class="skill frameworks" style="width: 86%;" data-info="Various levels of experience">
-      Frameworks <small>CreateJS, D3.JS, BackBone, Twitter Bootstrap, jQuery</small>
-    </div>
-
-    <div class="skill various" style="width: 83%;" data-info="Various levels of experience">
-      Various <small>Grunt, Gulp, Git, SVN, Arduino, Ajax, Electronics</small>
-    </div>
-
-    <div class="skill cms" style="width: 80%;" data-info="Varying levels of experience">
-      CMS <small>Expression Engine, Concrete5, Wordpress, Drupal</small>
-    </div>
-  <!-- Other -->
-    <h2 style="clear:both;">Other</h2>
-    <div class="skill adobecs" style="width: 85%;" data-info="Various working experience">
-      Adobe Creative Suite  <small>Photoshop , After Effects , Illustrator , Flash</small>
-    </div>
-
-    <div class="skill unity" style="width: 82%;" data-info="Interactive 3D applications in VR">
-      Unity
-    </div>
-
-    <div class="skill langiage" style="width: 75%;" data-info="various levels of experience">
-      language basics <small> PHP, JS, C, C#, Java, Swift</small>
-    </div>
-  </div>
-</div>
-
-<div id="contact">
-  <div class="content">
-    <h1 class="page-heading">Contact</h1>
-    <p>
-      <strong>Send me a mail:</strong> <a href="mailto:bartvanitterbeeck@gmail.com">bartvanitterbeeck@gmail.com</a>
-      <br>
-      <br>
-      <strong>Send me a tweet:</strong> <a href="http://twitter.com/bartbarto">@BartBarto</a>
-      <br>
-      <br>
-      <strong>Send me a letter:</strong> Willem Linnigstraat 11 - 2060 Antwerpen - Belgium
-      <br>
-      <br>
-      <br>
-         <a href="https://twitter.com/{{ site.twitter_username }}" class="social">
-          <span class="fa-stack">
-            <!-- <i class="fa fa-square twitter fa-stack-2x"></i> -->
-            <i class="fa fa-twitter-square fa-stack-2x fa-inverse"></i>
-          </span>
-        </a>
-        <a href="https://www.linkedin.com/profile/view?id={{ site.linkedin_id }}" class="social">
-          <span class="fa-stack">
-            <!-- <i class="fa fa-square twitter fa-stack-2x"></i> -->
-            <i class="fa fa-linkedin-square fa-stack-2x fa-inverse"></i>
-          </span>
-        </a>
-        <a href="https://github.com/{{ site.github_username }}" class="social">
-          <span class="fa-stack">
-            <!-- <i class="fa fa-square github fa-stack-2x"></i> -->
-            <i class="fa fa-github-square fa-stack-2x fa-inverse"></i>
-          </span>
-        </a>
-        <a href="https://facebook.com/{{ site.facebook_username }}" class="social">
-          <span class="fa-stack">
-            <!-- <i class="fa fa-square facebook fa-stack-2x"></i> -->
-            <i class="fa fa-facebook-square fa-stack-2x fa-inverse"></i>
-          </span>
-        </a>
-        <a href="https://pinterest.com/{{ site.pinterest_username }}" class="social">
-          <span class="fa-stack">
-            <!-- <i class="fa fa-square pinterest fa-stack-2x"></i> -->
-            <i class="fa fa-pinterest-square fa-stack-2x fa-inverse"></i>
-          </span>
-        </a>
-        <a href="https://plus.google.com/u/0/{{ site.google_plus_id }}" class="social">
-          <span class="fa-stack">
-            <!-- <i class="fa fa-square google-plus fa-stack-2x"></i> -->
-            <i class="fa fa-google-plus-square fa-stack-2x fa-inverse"></i>
-          </span>
-        </a>
-        <a href="mailto:{{ site.email }}" class="social">
-          <span class="fa-stack">
-            <i class="fa fa-square mail fa-stack-2x"></i>
-            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-    </p>
-  </div>
-</div>
+</html>
