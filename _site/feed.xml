@@ -6,9 +6,9 @@
 </description>
     <link>http://bartvi.be/</link>
     <atom:link href="http://bartvi.be/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 09 Sep 2015 13:12:40 +0200</pubDate>
-    <lastBuildDate>Wed, 09 Sep 2015 13:12:40 +0200</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Tue, 13 Jan 2026 19:02:20 +0100</pubDate>
+    <lastBuildDate>Tue, 13 Jan 2026 19:02:20 +0100</lastBuildDate>
+    <generator>Jekyll v3.10.0</generator>
     
       <item>
         <title>Kerm.is</title>
@@ -28,7 +28,7 @@ You can play these games using a Leap Motion, your smartphone, or just your mous
         <guid isPermaLink="true">http://bartvi.be/work/kerm.is</guid>
         
         
-        <category>3d</category>
+        <category>3D</category>
         
         <category>web</category>
         
@@ -53,7 +53,7 @@ You can play these games using a Leap Motion, your smartphone, or just your mous
         
         <category>design</category>
         
-        <category>motion-graphics</category>
+        <category>Motion-Graphics</category>
         
       </item>
     
@@ -113,7 +113,7 @@ You can play these games using a Leap Motion, your smartphone, or just your mous
         <guid isPermaLink="true">http://bartvi.be/work/kinetic-typography</guid>
         
         
-        <category>motion-graphics</category>
+        <category>Motion-graphics</category>
         
         <category>design</category>
         
@@ -173,7 +173,7 @@ Based on a rating system you could then swap your items with similiarly rated it
         
         <category>html</category>
         
-        <category>node.js</category>
+        <category>Node.js</category>
         
       </item>
     
